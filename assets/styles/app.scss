@@ -89,3 +89,19 @@ body {
     font-weight: bold;
     text-decoration: none;
 }
+
+.nav-link-shared.active {
+    background-color: $secondary;
+    position: relative;
+}
+
+.nav-link-shared.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    width: 100%;
+    height: 5px;
+    background-color: $info;
+    opacity: 1;
+}
