@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'base.html.twig' %}  
 
 {% block title %}Home{% endblock %}
 
@@ -12,15 +12,15 @@
                 </a>            
 
                 <li class="nav-item d-md-inline d-none">
-                <a class="nav-link text-light fs-4 px-3 py-0 rounded-3" href="#">NEWS</a>
+                <a class="nav-link-home text-light fs-4 px-3 py-0 rounded-3" href="{{ path('news') }}">ACTUALITES</a>
                 </li>
                 
                 <li class="nav-item d-md-inline d-none">
-                <a class="nav-link text-light fs-4 px-3 py-0 rounded-3" href="#">TEAMS</a>
+                <a class="nav-link-home text-light fs-4 px-3 py-0 rounded-3" href="#">EQUIPES</a>
                 </li>
 
                 <li class="nav-item d-md-inline d-none">
-                <a class="nav-link text-light fs-4 px-3 py-0 rounded-3" href="#">TOURNAMENT</a>
+                <a class="nav-link-home text-light fs-4 px-3 py-0 rounded-3" href="#">TOURNOI</a>
                 </li>
             </div>
         </nav>
@@ -29,17 +29,17 @@
             <img src="{{ asset('build/images/cover.jpg') }}" class="w-100 mt-2"/>
         </div>
         
-        <div class="home-nav-mobile d-flex flex-column mt-3">
+        <div class="home-nav-mobile d-flex d-md-none flex-column mt-3">
             <li class="nav-item-mobile d-flex d-md-none justify-content-center mx-auto my-3 bg-dark rounded-3 w-75">
-            <a class="nav-link-mobile text-light fs-2" href="#">NEWS</a>
+            <a class="nav-link-home-mobile text-light fs-2" href="{{ path('news') }}">ACTUALITES</a>
             </li>
             
             <li class="nav-item-mobile d-flex d-md-none justify-content-center mx-auto my-3 bg-dark rounded-3 w-75">
-            <a class="nav-link-mobile text-light fs-2" href="#">TEAMS</a>
+            <a class="nav-link-home-mobile text-light fs-2" href="#">EQUIPES</a>
             </li>
 
             <li class="nav-item-mobile d-flex d-md-none justify-content-center mx-auto my-3 bg-dark rounded-3 w-75">
-            <a class="nav-link-mobile text-light fs-2" href="#">TOURNAMENT</a>
+            <a class="nav-link-home-mobile text-light fs-2" href="#">TOURNOI</a>
             </li>
         </div>
     </main>

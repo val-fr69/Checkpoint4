@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}News{% endblock %}
+
+{% block body %}
+
+    {{ include('shared/navbar.html.twig') }}
+    <div class="container">
+    <div class="row">
+    <div class="d-flex flex-column justify-content-center">
+        <img src="{{ asset('build/images/' ~ read.poster) }}" class="article-img col-10 mx-auto mt-4" />
+        <h3 class="article-title text-light">{{read.title}}</h3>
+        <p class="article-date text-light">publié le {{read.postdate.format('d-m-Y')}}</p>      
+    </div>
+    </div>
+    </div>
+
+{% endblock %}
