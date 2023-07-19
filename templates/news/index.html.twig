@@ -15,6 +15,12 @@
                         <h3 class="article-title text-light">{{articles.title}}</h3>
                         <p class="article-date text-light">publié le {{articles.postdate.format('d-m-Y')}}</p>         
                     </div>
+                   
+                    <div class="article d-md-none d-flex mt-3">
+                        <img src="{{ asset('build/images/' ~ articles.poster) }}" class="article-img-mobile mt-4 col-6" />
+                        <p class="article-title-mobile d-flex justify-content-center align-items-center text-light mb-0 ms-5">{{articles.title}}</p>    
+                    </div>
+                    
                 {% else %}
                     Aucuns articles trouvés
                 {% endfor %}

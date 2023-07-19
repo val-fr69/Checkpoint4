@@ -41,7 +41,7 @@ class ArticleFixtures extends Fixture
         ],
 
         [
-            'title' => 'La finale de la saison du LEC de 2023 aura lieu du 8 au 10 septembre !',
+            'title' => 'La finale du LEC de 2023 en Septembre 2023 !',
             'postdate' => '2023-04-21 00:00:00',
             'poster' => 'article6.jpg',
         ],
