@@ -3,5 +3,21 @@
 {% block title %}News{% endblock %}
 
 {% block body %}
+
     {{ include('shared/navbar.html.twig') }}
+
+    <div class="container">
+        <div class="row">
+
+                {% for articles in article %}
+                    <div class="col-lg-4 col-md-6 d-none d-md-inline mx-auto">
+                        <img src="{{ asset('build/images/' ~ articles.poster) }}" class="article-img col-12 rounded-4 mx-auto mt-4" />
+                        <h3 class="article-title text-light">{{articles.title}}</h3>
+                        <p class="article-date text-light">publié le {{articles.postdate.format('d-m-Y')}}</p>         
+                    </div>
+                {% else %}
+                    Aucuns articles trouvés
+                {% endfor %}
+        </div>
+    </div>
 {% endblock %}
