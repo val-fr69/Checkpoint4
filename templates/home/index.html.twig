@@ -3,5 +3,29 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
-    
+    <main>      
+        <nav class="navbar">
+
+            <div class="collapse navbar-collapse d-flex justify-content-around mt-3" id="navbarNav">
+
+                <a class="navbar-brand ms-md-5 ms-3" href="{{ path('home') }}">
+                <img src="{{ asset('build/images/logo.jpg') }}" class="logo-desktop" />
+                </a>            
+
+                <li class="nav-item d-md-inline d-none">
+                <a class="nav-link text-light fs-4 px-3 py-0 rounded-3" href="#">NEWS</a>
+                </li>
+                
+                <li class="nav-item d-md-inline d-none">
+                <a class="nav-link text-light fs-4 px-3 py-0 rounded-3" href="#">TEAMS</a>
+                </li>
+
+                <li class="nav-item d-md-inline d-none">
+                <a class="nav-link text-light fs-4 px-3 py-0 rounded-3" href="#">TOURNAMENT</a>
+                </li>
+
+            </div>
+
+        </nav>
+    </main>
 {% endblock %}
