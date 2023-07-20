@@ -3,20 +3,22 @@
 {% block title %}Modifier un joueur{% endblock %}
 
 {% block body %}
-<div class="container">
-
-    <h1 class="mt-4 text-light">Modifier un joueur</h1>
-
     {% for message in app.flashes('success')%}
         <div class="alert alert-success mt-4">
             {{message}}
         </div>
     {% endfor %}
 
-    <div>{{form_start(form)}}</div>
-    <div>{{form_row(form.name)}}</div>
-    <div>{{form_row(form.role)}}</div>
-    <div>{{form_row(form.team)}}</div>
-    <div>{{form_end(form)}}</div>
+<div class="container mt-5 text-secondary">
+    <div class="row">
+    <div class="d-flex flex-column">
+    <h1 class="mt-4 text-light">Modifier un joueur</h1>
+    <div  class="text-light">{{form_start(form)}}</div>
+    <div class="text-light mb-3">{{form_row(form.name)}}</div>
+    <div  class="text-light mb-3">{{form_row(form.role)}}</div>
+    <div class="text-light mb-3">{{form_row(form.team)}}</div>
+    <div class="text-light">{{form_end(form)}}</div>
+    </div>
+    </div>
 </div>
 {% endblock %}

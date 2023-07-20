@@ -107,7 +107,7 @@ body {
 }
 
 .article-date {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .article .article-img-mobile {
@@ -119,9 +119,18 @@ body {
     }
 }
 
+.team {
+    width: 280px;
+}
+
 .team-img {
-    height: 100px;
-    width: 120px;
+    height: 140px;
+    width: 170px;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 .team-nationality {

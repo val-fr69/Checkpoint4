@@ -25,7 +25,7 @@ class PlayerType extends AbstractType
                 'attr' => [
                     'class' => 'btn btn-dark'
                 ],
-                'label' => 'Ajouter un joueur'
+                'label' => 'Valider'
             ]);
     }
 
