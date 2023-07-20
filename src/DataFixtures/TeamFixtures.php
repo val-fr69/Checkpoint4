@@ -44,6 +44,19 @@ class TeamFixtures extends Fixture
             'nationality' => 'Allemagne',
             'logo' => 'g2.png',
         ],
+
+        [
+            'name' => 'CLOUD9',
+            'nationality' => 'Etats-Unis',
+            'logo' => 'cloud9.png',
+        ],
+
+        [
+            'name' => 'VITALITY',
+            'nationality' => 'France',
+            'logo' => 'vitality.png',
+        ],
+
     ];
 
     public function load(ObjectManager $manager): void
