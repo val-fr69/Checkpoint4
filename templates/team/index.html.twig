@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row">
                 {% for team in teams %}
-                    <div class="col-lg-3 col-sm-6 col-12 d-flex flex-column">
+                    <div class="col-lg-3 col-sm-6 col-12 d-flex flex-column mt-5">
                         <img src="{{ asset('build/images/' ~ team.logo) }}" class="team-img col-12 mx-auto mt-4"/>
                         <h3 class="team-name text-light d-flex justify-content-center">{{team.name}}</h3>
                         <p class="team-nationality text-light d-flex justify-content-center">{{team.nationality}}</p>         
