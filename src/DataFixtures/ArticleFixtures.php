@@ -4,10 +4,12 @@ namespace App\DataFixtures;
 
 use App\Entity\Article as ArticleEntity;
 use DateTimeImmutable;
+use App\DataFixtures\TeamFixtures;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 
-class ArticleFixtures extends Fixture
+class ArticleFixtures extends Fixture implements DependentFixtureInterface
 {
     public const ARTICLES = [
         [
@@ -80,8 +82,10 @@ class ArticleFixtures extends Fixture
         $manager->flush();
     }
 
-    public function getDependencies(): array
+    public function getDependencies()
     {
-        return [ArticleFixtures::class];
+        return [
+            TeamFixtures::class,
+        ];
     }
 }

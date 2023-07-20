@@ -68,6 +68,8 @@ class TeamFixtures extends Fixture
                 ->setNationality($comp['nationality'])
                 ->setLogo($comp['logo']);
             $manager->persist($team);
+
+            $this->addReference($comp['name'], $team);
         }
 
         $manager->flush();
