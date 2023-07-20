@@ -44,6 +44,7 @@ class PlayerController extends AbstractController
                 'success',
                 'Le joueur a bien été ajouté à une équipe'
             );
+            return $this->redirectToRoute('list_player');
         }
 
         return $this->render('player/new.html.twig', [
@@ -74,7 +75,9 @@ class PlayerController extends AbstractController
                 'success',
                 'Le joueur a bien été modifié'
             );
+            return $this->redirectToRoute('list_player');
         }
+
 
         return $this->render('player/edit.html.twig', [
             'form' => $form->createView()
