@@ -79,4 +79,9 @@ class ArticleFixtures extends Fixture
 
         $manager->flush();
     }
+
+    public function getDependencies(): array
+    {
+        return [ArticleFixtures::class];
+    }
 }
