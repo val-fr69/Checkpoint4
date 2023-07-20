@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Liste des joueurs {% endblock %}
+
+{% block body %}
+
+    {{ include('shared/navbar.html.twig') }}
+
+    {% for message in app.flashes('success')%}
+        <div class="alert alert-success mt-4">
+            {{message}}
+        </div>
+    {% endfor %}
+    
+    <div>
+    <table class="table mt-4">
+        <tbody>
+            {% for player in players %}
+                <tr class="table-primary">
+                    <th scope="row">{{player.id}}</th>
+                    <td>{{player.name}}</td>
+                    <td>{{player.role}}</td>
+                    <td>{{player.team.name}}</td>
+                    <td>
+                        <a href="{{ path('edit_player', { id: player.id } )}}" 
+                        class="btn btn-dark">Modifier</a>
+                    </td>
+                    <td>
+                        <a href="{{ path('delete_player', { id: player.id } )}}" 
+                        class="btn btn-dark">Supprimer</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+{% endblock %}
