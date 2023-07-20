@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}News{% endblock %}
+
+{% block body %}
+
+    {{ include('shared/navbar.html.twig') }}
+    
+    <div class="container">
+        <div class="row">
+                {% for player in players %}
+                    <div class="col-lg-3 col-sm-6 col-12 d-flex flex-column mt-5">
+                        <h3 class="team-name text-light d-flex justify-content-center">{{player.name}}</h3>
+                        <p class="team-nationality text-light d-flex justify-content-center">{{player.role}}</p>         
+                    </div>                    
+                {% else %}
+                    Aucunes équipes trouvées
+                {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
