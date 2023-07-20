@@ -19,6 +19,10 @@ class Players
     #[ORM\Column(length: 100)]
     private ?string $name = null;
 
+    #[ORM\ManyToOne]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Team $team = null; // Remplacez "team" par "Team" pour utiliser la casse correcte
+
     public function getId(): ?int
     {
         return $this->id;
@@ -44,6 +48,18 @@ class Players
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function getTeam(): ?Team // Remplacez "team" par "Team" pour utiliser la casse correcte
+    {
+        return $this->team;
+    }
+
+    public function setTeam(?Team $team): self // Remplacez "team" par "Team" pour utiliser la casse correcte
+    {
+        $this->team = $team;
 
         return $this;
     }
