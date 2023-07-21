@@ -9,25 +9,24 @@
     <div class="container">
         <div class="row">
 
-                {% for article in articles %}
-                    <div class="col-lg-4 col-md-6 d-none d-md-inline mx-auto">
-                        <a href="{{ path('news_read', { id: article.id }) }}">
-                        <img src="{{ asset('build/images/' ~ article.poster) }}" class="article-img col-12 rounded-2 mx-auto mt-4" />
-                        <h3 class="article-title text-light">{{article.title}}</h3>
-                        <p class="article-date text-light">publié le {{article.postdate.format('d-m-Y')}}</p>
-                        </a>         
-                    </div>
-                   
-                    <div class="article d-md-none d-flex mt-3">
-                        <a href="{{ path('news_read', { id: article.id }) }}">
-                        <img src="{{ asset('build/images/' ~ article.poster) }}" class="article-img-mobile mt-4 col-6" /></a>   
-                        <p class="article-title-mobile d-flex justify-content-center align-items-center text-light mb-0 ms-5">{{article.title}}</p> 
-                        
-                    </div>
-                    
-                {% else %}
-                    Aucuns articles trouvés
-                {% endfor %}
+        {% for article in articles %}
+            <div class="col-lg-4 col-md-6 d-none d-md-inline mx-auto article-container">
+                <a href="{{ path('news_read', { id: article.id }) }}">
+                    <img src="{{ asset('build/images/' ~ article.poster) }}" class="article-img col-12 rounded-2 mx-auto mt-4" />
+                    <h3 class="article-title text-light">{{article.title}}</h3>
+                    <p class="article-date text-light">publié le {{article.postdate.format('d-m-Y')}}</p>
+                </a>         
+            </div>
+                       
+            <div class="article d-md-none d-flex mt-3 article-container">
+                <a href="{{ path('news_read', { id: article.id }) }}">
+                    <img src="{{ asset('build/images/' ~ article.poster) }}" class="article-img-mobile mt-4 col-6" />
+                </a>   
+                <p class="article-title-mobile d-flex justify-content-center align-items-center text-light mb-0 ms-5">{{article.title}}</p> 
+            </div>
+        {% else %}
+            Aucuns articles trouvés
+        {% endfor %}
         </div>
     </div>
 {% endblock %}
