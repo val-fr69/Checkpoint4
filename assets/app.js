@@ -55,14 +55,10 @@ navLinks.forEach(function (link) {
 
 const articleImages = document.querySelectorAll(".article-container");
 
-// Ajouter un événement onclick à chaque image
 articleImages.forEach((articleImage) => {
-    articleImage.onclick = function () {
-        afficherAlerte();
-    };
+    articleImage.addEventListener("click", afficherAlerte);
 });
 
-// La fonction afficherAlerte affiche l'alerte
 function afficherAlerte() {
     alert('Article choisi !');
 }
